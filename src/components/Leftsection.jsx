@@ -3,10 +3,13 @@ import { IoIosSearch } from "react-icons/io";
 import "./leftsection.css";
 import { FaLandmark } from "react-icons/fa";
 import { CiBookmark } from "react-icons/ci";
+import { FaLinkedin } from "react-icons/fa";
+import Groups from "./Recent";
 const Leftsection = () => {
   return (
     <>
       <form className="d-flex" role="search">
+        <FaLinkedin className="linkedin-icon" />
         <input
           className="form-control text-white me-1"
           type="search"
@@ -36,7 +39,6 @@ const Leftsection = () => {
           <p>
             <span>your profile views</span>
             <span className="number">24</span>
-        
           </p>
           <p>
             <span> your post views </span>
@@ -47,19 +49,24 @@ const Leftsection = () => {
             <span className="number">270</span>
           </p>
           <p>
-            <span>
-              <CiBookmark />
-              my items
-            </span>
+            <div>
+              <span>
+                <CiBookmark className="icon-blue" />
+              </span>
+              <span> my items</span>
+            </div>
 
-            <span>
-              <FaLandmark />
-              try premium
-            </span>
+            <div>
+              <span>
+                <FaLandmark className="icon-yellow" />
+              </span>
+              <span> try premium</span>
+            </div>
           </p>
           <p className="card-text"></p>
         </div>
       </div>
+      <Groups />
     </>
   );
 };
